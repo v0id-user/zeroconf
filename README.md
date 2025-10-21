@@ -16,10 +16,14 @@ Devices register themselves with a Zeroconf server, and other devices can discov
 
 ```bash
 pip install -r requirements.txt
+
+# Run the announce script to register your device with the Zeroconf server
 python main.py announce
 
+# Run the discover script to discover other devices on the network from a different terminal
 python main.py discover
 ```
 
 
-
+# Notes
+- You can run this from a completely different machine, but they must be on the same network.
