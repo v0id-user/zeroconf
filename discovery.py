@@ -11,7 +11,7 @@ def on_service_state_change(zeroconf: Zeroconf, service_type: str, name: str, st
 def discover_service(timeout=5, service_type="_http._tcp.local."):
     zeroconf = Zeroconf()
     try:
-        browser = ServiceBrowser(zeroconf, service_type, handlers=[on_service_state_change])
+        ServiceBrowser(zeroconf, service_type, handlers=[on_service_state_change])
         print(f"Discovering services of type '{service_type}' for {timeout} seconds...")
         from time import sleep
         sleep(timeout)
